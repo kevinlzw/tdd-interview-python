@@ -1,10 +1,10 @@
 class Sheet:
 
-    def get(self, s: str):
+    def get(self, column: str):
         raise NotImplementedError("Not implemented!")
 
-    def getLiteral(self, s:str):
+    def getLiteral(self, column:str):
         raise NotImplementedError("Not implemented!")
 
-    def put(self, cell: str, s: str):
+    def put(self, column: str, value: str):
         raise NotImplementedError("Not implemented!")
