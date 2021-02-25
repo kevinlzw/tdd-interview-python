@@ -1,7 +1,7 @@
 # 欢迎来到Excel编程项目
 
 在这个项目里，你将着手编写一个实现一些简易功能的Excel。该Excel需要实现的功能已经在/test/model中的三个测试文件中定义完成，
-请你从test_spreadsheet1.py开始，按照定义好的测试案例来完善在/src/model下的spreadsheet.py文件。请你尽可能多得完善Excel的功能来
+请你从test_spreadsheet1.py开始，按照定义好的测试案例来逐渐完善在/src/model下的spreadsheet.py文件。请你尽可能多得完善Excel的功能来
 满足测试案例。由于测试案例过多，你只需要在规定时间内完成你能做到的即可。请自由地添加更多你认为需要的测试案例。
 
 ## 用到的技术
