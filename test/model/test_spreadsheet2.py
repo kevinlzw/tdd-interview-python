@@ -19,8 +19,8 @@ class SpreadsheetTestUnit2(unittest.TestCase):
         """
         sheet = Sheet()
         sheet.put("A", "=7")
-        self.assertEqual("=7", sheet.getLiteral("B"), "Formula")
-        self.assertEqual("7", sheet.get("B"), "Value")
+        self.assertEqual("=7", sheet.getLiteral("A"), "Formula")
+        self.assertEqual("7", sheet.get("A"), "Value")
 
     def testParentheses(self):
         """
