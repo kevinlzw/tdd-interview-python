@@ -4,7 +4,7 @@ from src.model.spreadsheet import Sheet
 
 
 class SpreadsheetTestUnit3(unittest.TestCase):
-    def testThatCellReferenceWorks(self):
+    def test_that_cell_reference_works(self):
         """
         Excel的等式应该正确地获取其他列的值
         """
@@ -16,7 +16,7 @@ class SpreadsheetTestUnit3(unittest.TestCase):
         sheet.put("A", "9")
         self.assertEqual("9", sheet.get("B"), "cell change propagation")
 
-    def testThatFormulasKnowCellsAndRecalculate(self):
+    def test_that_formulas_know_cells_and_recalculate(self):
         """
         Excel的等式应该正确地计算包含其他列的值的等式
         """
@@ -29,7 +29,7 @@ class SpreadsheetTestUnit3(unittest.TestCase):
         sheet.put("B", "6")
         self.assertEqual("18", sheet.get("E"), "re-calculation")
 
-    def testThatDeepPropagationWorks(self):
+    def test_that_deep_propagation_works(self):
         """
         Excel的等式应该正确地获取其他列的值
         """
@@ -43,7 +43,7 @@ class SpreadsheetTestUnit3(unittest.TestCase):
         sheet.put("B", "6")
         self.assertEqual("6", sheet.get("D"), "deep re-calculation")
 
-    def testThatFormulaWorksWithManyCells(self):
+    def test_that_formula_works_with_many_cells(self):
         """
         Excel的等式应该正确地处理复杂的计算。
         """
@@ -60,7 +60,7 @@ class SpreadsheetTestUnit3(unittest.TestCase):
         self.assertEqual("34", sheet.get("D"), "multiple expressions - D")
         self.assertEqual("51", sheet.get("H"), "multiple expressions - H")
 
-    def testThatCircularReferencesAdmitIt(self):
+    def test_that_circular_references_admit_it(self):
         """
         如果出现了循环引用，Excel应该提示。
         """

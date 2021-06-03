@@ -4,7 +4,7 @@ from src.model.spreadsheet import Sheet
 
 
 class SpreadsheetTestUnit1(unittest.TestCase):
-    def testThatCellsAreEmptyByDefault(self):
+    def test_that_cells_are_empty_by_default(self):
         """
         每列默认值为空字符串
         """
@@ -12,7 +12,7 @@ class SpreadsheetTestUnit1(unittest.TestCase):
         self.assertEqual("", sheet.get("A"))
         self.assertEqual("", sheet.get("ZX"))
 
-    def testThatTextCellsAreStored(self):
+    def test_that_text_cells_are_stored(self):
         """
         Excel可以正确地存储put的值
         """
@@ -28,7 +28,7 @@ class SpreadsheetTestUnit1(unittest.TestCase):
         sheet.put(cell, "")
         self.assertEqual("", sheet.get(cell))
 
-    def testThatManyCellsExist(self):
+    def test_that_many_cells_exist(self):
         """
         Excel可以正确地覆盖之前的值
         """
@@ -46,7 +46,7 @@ class SpreadsheetTestUnit1(unittest.TestCase):
         self.assertEqual("Second", sheet.get("X"), "X same")
         self.assertEqual("Third", sheet.get("ZX"), "ZX same")
 
-    def testThatNumericCellsAreIdentifiedAndStored(self):
+    def test_that_numeric_cells_are_identified_and_stored(self):
         """
         Excel可以正确识别纯数字，对于纯数字，将多余的空格去掉。
         """
@@ -68,7 +68,7 @@ class SpreadsheetTestUnit1(unittest.TestCase):
         sheet.put(cell, " ")
         self.assertEqual(" ", sheet.get(cell))
 
-    def testThatWeHaveAccessToCellLiteralValuesForEditing(self):
+    def test_that_we_have_access_to_cell_literal_values_for_editing(self):
         """
         getLiteral需要返回未处理的纯字符串。
         """
