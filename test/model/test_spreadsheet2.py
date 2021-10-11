@@ -1,6 +1,6 @@
 import unittest
 
-from src.model.spreadsheet import Sheet
+from src.model.Spreadsheet import Sheet
 
 
 class SpreadsheetTestUnit2(unittest.TestCase):
@@ -11,7 +11,7 @@ class SpreadsheetTestUnit2(unittest.TestCase):
         sheet = Sheet()
         sheet.put("B", " =7")
         self.assertEqual(" =7", sheet.get("B"), "Not a formula")
-        self.assertEqual(" =7", sheet.getLiteral("B"), "Unchanged")
+        self.assertEqual(" =7", sheet.get_literal("B"), "Unchanged")
 
     def test_constant_formula(self):
         """
@@ -19,7 +19,7 @@ class SpreadsheetTestUnit2(unittest.TestCase):
         """
         sheet = Sheet()
         sheet.put("A", "=7")
-        self.assertEqual("=7", sheet.getLiteral("A"), "Formula")
+        self.assertEqual("=7", sheet.get_literal("A"), "Formula")
         self.assertEqual("7", sheet.get("A"), "Value")
 
     def test_parentheses(self):

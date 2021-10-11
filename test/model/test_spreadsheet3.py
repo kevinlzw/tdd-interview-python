@@ -1,6 +1,6 @@
 import unittest
 
-from src.model.spreadsheet import Sheet
+from src.model.Spreadsheet import Sheet
 
 
 class SpreadsheetTestUnit3(unittest.TestCase):

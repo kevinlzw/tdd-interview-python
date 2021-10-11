@@ -3,7 +3,7 @@
 
 在这个笔试题目里，你将着手编写一个实现一些简易功能的Excel。
 
-本笔试题目为测试驱动，即：全部笔试题由20个测试案例组成，其对应文件位于/test/model/目录下。其中，test_spreadsheet1.py包含5个，test_spreadsheet2.py包含10个，test_spreadsheet3.py包含5个，为了通过上述这20个测试案例，你需要逐步完善位于/src/model/目录下的spreadsheet.py文件的代码。
+本笔试题目为测试驱动，即：全部笔试题由20个测试案例组成，其对应文件位于`/test/model/`目录下。其中，`test_spreadsheet1.py`包含5个，`test_spreadsheet2.py`包含10个，`test_spreadsheet3.py`包含5个，为了通过上述这20个测试案例，你需要逐步完善位于`/src/model/`目录下的`spreadsheet.py`文件的代码。
 
 请你尽可能多的完善Excel的功能来满足测试案例。你不需要完成全部案例，只需要在规定的2小时内通过尽可能多的测试案例即可。
 

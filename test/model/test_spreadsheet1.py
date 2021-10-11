@@ -1,6 +1,6 @@
 import unittest
 
-from src.model.spreadsheet import Sheet
+from src.model.Spreadsheet import Sheet
 
 
 class SpreadsheetTestUnit1(unittest.TestCase):
@@ -76,10 +76,10 @@ class SpreadsheetTestUnit1(unittest.TestCase):
         cell = 'A'
 
         sheet.put(cell, "Some string")
-        self.assertEqual("Some string", sheet.getLiteral(cell))
+        self.assertEqual("Some string", sheet.get_literal(cell))
 
         sheet.put(cell, " 1234 ")
-        self.assertEqual(" 1234 ", sheet.getLiteral(cell))
+        self.assertEqual(" 1234 ", sheet.get_literal(cell))
 
         sheet.put(cell, "=7")
-        self.assertEqual("=7", sheet.getLiteral(cell))
+        self.assertEqual("=7", sheet.get_literal(cell))

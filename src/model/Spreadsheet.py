@@ -8,7 +8,7 @@ class Sheet:
         """
         raise NotImplementedError("Not implemented!")
 
-    def getLiteral(self, column:str):
+    def get_literal(self, column:str):
         """
         该函数的目的是获取在column列的字符串值，内容为等式的话不需要计算，直接返回字符串。举例，若在"A1"列存储的值为"=7+3"，sheet.getLiteral("A1")应返回"=7+3"。
         :param column: 列数
